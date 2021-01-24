@@ -1,0 +1,156 @@
+.amo-button {
+  display: block;
+  background-size: cover;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+.amo-button--main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.amo-button--main.maincollapsed {
+  box-shadow: none;
+}
+
+.amo-button--main-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  background-size: 80%;
+  background-image: url("button.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.amo-button--main.maincollapsed .amo-button--main-icon {
+  background-image: url("");
+  background-size: 40%;
+}
+
+.amo-button__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+.amo-vertical .amo-button__iframe {
+  max-width: 100%;
+}
+
+.amo-horisontal .amo-button__iframe {
+  max-width: unset;
+}
+
+.amo-button-holder {
+  padding: 7px;
+  z-index: 9999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.amo-button-holder * {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media print{
+  .amo-button-holder {
+    display: none;
+  }
+}
+
+.amo-brand {
+  position: absolute;
+  height: 17px;
+  bottom: 0;
+  opacity: 0;
+  text-align: center;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.amo-brand.collapsed {
+  opacity: 1;
+  visibility: visible;
+}
+
+.amo-brand__link-holder {
+  display: inline-block;
+  float: right;
+  white-space: nowrap;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 10px;
+  height: 17px;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.amo-brand__link {
+  font-family: 'PT Sans', Arial, sans-serif;
+  line-height: 1.7;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.amo-brand__link:hover,
+.amo-brand__link:active,
+.amo-brand__link:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Animations */
+.amo_animation_tremble {
+  animation: amo_dragging 2s 0.2s both infinite;
+}
+
+.amo_animation_tremble svg {
+  animation: amo_dragging-icon 2s 0.2s both infinite;
+}
+
+.amo_animation_waves::before, .amo_animation_waves::after {
+  content: "";
+  background-color: inherit;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 0;
+  animation: amo-button-wave infinite 2.6s 0s linear;
+}
+
+.amo_animation_waves::before {
+  animation-delay: 0s;
+}
+
+.amo_animation_waves::after {
+  animation-delay: 1.3s;
+}
+
+.amo_animation_shake {
+  animation: amo_shake 5s 0s both infinite;
+}

@@ -1,0 +1,43 @@
+@keyframes amo_dragging-icon {
+    0%, 12%, 16%, 20%, 24%, 28%, 32%, 36%, 4%, 40%, 44%, 48% {
+        transform: scale(1.02)
+    }
+    100%, 14%, 18%, 2%, 22%, 26%, 30%, 34%, 38%, 42%, 46%, 50%, 8% {
+        transform: scale(1);
+    }
+}
+
+@keyframes amo_dragging {
+    0%, 12%, 16%, 20%, 24%, 28%, 32%, 36%, 4%, 40%, 44%, 48% {
+        transform: scale(1.04);
+    }
+    100%, 14%, 18%, 2%, 22%, 26%, 30%, 34%, 38%, 42%, 46%, 50%, 8% {
+        transform: scale(1);
+    }
+}
+
+@keyframes amo-button-wave {
+    0% {
+        transform: scale(1, 1);
+        opacity: 0.45
+    }
+    40% {
+        opacity: 0.45
+    }
+    100% {
+        transform: scale(1.35, 1.35);
+        opacity: 0
+    }
+}
+
+@keyframes amo_shake {
+    0%, 20% {
+        transform: translate3d(0, 0, 0);
+    }
+    10%, 14%, 18%, 2%, 6% {
+        transform: translate3d(-7px, 0, 0);
+    }
+    12%, 16%, 4%, 8% {
+        transform: translate3d(7px, 0, 0);
+    }
+}
