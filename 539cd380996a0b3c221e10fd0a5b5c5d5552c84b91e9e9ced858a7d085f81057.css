@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.amo-button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: 80% !important;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    border-radius: 60px;
+    visibility: visible;
+    opacity: 1;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    will-change: transform, opacity;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+.amo-button--telegram {
+    background: #2ca8dd url("") 50% no-repeat;
+}
+.amo-button--messenger {
+    background: #0281ff url("") 50% no-repeat;
+}
+.amo-button--viber {
+    background: #665cac url("viber.svg") 50% no-repeat;
+}
+.amo-button--facebook {
+    background: #0281ff url("") 50% no-repeat;
+}
+.amo-button--vk {
+    background: #4a76a8 url("vk.svg") 50% no-repeat;
+}
+.amo-button--wechat {
+    background: #4fc134 url("") 50% no-repeat;
+}
+.amo-button--skype {
+    background: #00aff0 url("") 50% no-repeat;
+}
+
+.amo-button__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.amo-inner-buttons {
+    position: relative;
+    width: 60px;
+    height: auto;
+    margin: 0 auto;
+    z-index: 1;
+    padding-bottom: 0;
+}
+.amo-inner-buttons-body {
+    padding: 7px 0;
+    position: relative;
+}
+.amo-inner-buttons-body.horisontal {
+    height: 74px;
+    position: relative;
+}
+.amo-inner-buttons-body.vertical {
+    height: 100%;
+    position: relative;
+}
+.amo-inner-buttons .amo-button {
+    margin: 0 auto 4px;
+}
+.buttonscollapsed .amo-inner-buttons .amo-button {
+    visibility: hidden;
+}
+/*2*/
+
+    
+            .amo-inner-buttons .amo-button:nth-last-of-type(1) {
+        -webkit-transition-duration: 200ms;
+        transition-duration: 200ms;
+        }
+        .buttonscollapsed .amo-inner-buttons .amo-button:nth-last-of-type(1){
+        -webkit-transform: translate( 0, 120px);
+        transform: translate( 0, 120px);
+        }
+            .amo-inner-buttons .amo-button:nth-last-of-type(2) {
+        -webkit-transition-duration: 100ms;
+        transition-duration: 100ms;
+        }
+        .buttonscollapsed .amo-inner-buttons .amo-button:nth-last-of-type(2){
+        -webkit-transform: translate( 0, 60px);
+        transform: translate( 0, 60px);
+        }
+    
+.amo-inner-buttons.horisontal {
+    display: flex;
+    width: 128px;
+    height: 50px;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+            flex-direction: row-reverse;
+        padding: 0 10px;
+}
+.amo-inner-buttons.vertical {
+    display: flex;
+            flex-direction: column-reverse;
+        width: 60px;
+    height: 128px;
+    position: absolute;
+    bottom: 7px;
+                right: 7px;
+        padding: 10px 0;
+}
+.overlay{
+    position: absolute;
+    top: -7px;
+    bottom: -7px;
+    left: -7px;
+    right: -7px;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    border-radius: 60px;
+}
+.amo-inner-buttons.horisontal .overlay {
+
+}
+.amo-inner-buttons.vertical .overlay {
+}
+.amo-inner-buttons.horisontal .amo-button {
+    float:  left ;
+    margin: 0 4px 0 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center
+}
+
+.buttonscollapsed .amo-inner-buttons.horisontal .overlay {
+    opacity: 0;
+    visibility: hidden;
+            left: 128px;
+    }
+.buttonscollapsed .amo-inner-buttons.vertical .overlay {
+    opacity: 0;
+    visibility: hidden;
+    top: 128px;
+}
+
+.buttonscollapsed .amo-button {
+    opacity: 0;
+}
+
+.amo-button__title {
+    display: none;
+    position: absolute;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 14px;
+    opacity: 0.75;
+    background-color: #FFF;
+    color: #000;
+    padding: 5px 10px;
+    font-family: sans-serif;
+}
+
+.horisontal .amo-button__title {
+    bottom: -30px;
+}
+
+.vertical .amo-button__title {
+                right: 60px;
+        top: 17px;
+}
+
+.amo-button:hover .amo-button__title {
+    display:block;
+}
